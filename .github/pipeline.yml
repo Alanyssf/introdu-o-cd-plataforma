@@ -1,0 +1,37 @@
+name: Meu Primeiro CD
+
+# Define quando a automação vai rodar (Sempre que houver um push na branch main)
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  # Job 1: Testar o código
+  testar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Copiando os arquivos do repositório
+        uses: actions/checkout@v4
+
+      - name: Preparando o Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Instalando as dependências
+        run: npm install
+
+      - name: Rodando os testes
+        run: npm run test
+
+  # Job 2: Simular o Deploy (Só roda se o teste passar)
+  deploy:
+    needs: testar
+    runs-on: ubuntu-latest
+    steps:
+      - name: Simulando o envio para o servidor de produção
+        run: |
+          echo "🚀 Iniciando o Deploy..."
+          echo "Copiando arquivos para o servidor web..."
+          echo "Reiniciando o serviço da plataforma educacional..."
+          echo "✅ Deploy realizado com sucesso! A nova versão está no ar." 

@@ -1,0 +1,23 @@
+{
+  "name": "introdu-o-cd-plataforma",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alanyssf/introdu-o-cd-plataforma.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alanyssf/introdu-o-cd-plataforma/issues"
+  },
+  "homepage": "https://github.com/Alanyssf/introdu-o-cd-plataforma#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
